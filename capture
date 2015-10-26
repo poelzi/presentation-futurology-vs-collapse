@@ -1,0 +1,23 @@
+#!/usr/bin/env python
+import subprocess
+import os.path, sys, urlparse
+
+url = sys.argv[1]
+
+parsed = urlparse.urlparse(url)
+print parsed
+xp = parsed.path
+if xp[-1] == '/':
+    xp = xp[0:-1]
+if 'youtube' in parsed.netloc:
+    xp = "yt_%s" % parsed.query
+
+base = os.path.basename(xp).replace('.', '_') + '.png'
+print base
+extra = []
+if len(sys.argv) > 1:
+    extra = sys.argv[2:]
+subprocess.call(['cutycapt', '--min-width=1920', '--min-height=1080', '--url=%s' % url, '--out=img_raw/%s' %base] + extra)
+print '%s' %base
+
+#cutycapt --url='http://www.nakedcapitalism.com/2015/10/worse-than-fossil-fuels-why-bioenergy-is-not-green.html' --out=img/worse-than-fossil-fuels-why-bioenergy-is-not-green.raw.png

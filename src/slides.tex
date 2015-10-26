@@ -1,0 +1,507 @@
+%\documentclass[12pt]{beamer}
+\documentclass[10pt,handout]{beamer}
+\usetheme{Darmstadt}
+\usepackage{bmpsize}
+%\usepackage[pdftex]{graphicx}
+%\usepackage{graphicx}
+%\usepackage[german]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\setbeamertemplate{footline}[frame number]
+
+\newcommand{\cc}[1]{\includegraphics[height=4mm]{img/#1.png}\hspace{1mm}}
+\usepackage{ifthen}
+\newcommand{\license}[2][]{\\#2\ifthenelse{\equal{#1}{}}{}{\\\scriptsize\url{#1}}}
+\usepackage{textcomp}
+\usepackage{hyperref}
+\usepackage{mathtools}
+\usepackage[percent]{overpic}
+
+%=========================== FULL FRAME IMAGE
+\newcommand{\fullframepicture}[1]{
+%\mode
+{
+\usebackgroundtemplate{\includegraphics[height=1.0\textheight]{#1}}
+\begin{frame}[plain]
+\end{frame}
+}
+\mode{\usebackgroundtemplate{}}
+%\mode*
+}
+
+
+\pgfdeclarelayer{foreground}
+\pgfsetlayers{main,foreground}
+%\logo{\pgfputat{\pgfxy(-1,0)}{\pgfbox[center,base]{}}}
+
+
+\title{futurology vs collapse}
+\author{\small Daniel 'poelzi' Poelzleithner}
+\date{24.10.2015}
+
+\AtBeginSection[]
+{
+  \begin{frame}
+  \frametitle{Content}
+  \tableofcontents[currentsection]
+  \end{frame}
+}
+\begin{document}
+\maketitle
+\tableofcontents[%
+	currentsection,
+	sectionstyle=show,
+]
+
+
+\section{Introduction}
+
+
+\begin{frame}
+    \frametitle{Futurology vs. Collapse}
+    \begin{center}
+    futurology vs. collapse
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Futurology}
+    \begin{center}
+    \href{http://reddit.com/r/futurology}{http://reddit.com/r/futurology}
+    \begin{itemize}
+      \item Population: ~ 4,329,037 (Oct 2015)
+      \item very optimistic
+      \item technotratic (everything can be solved through technology)
+\end{itemize}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Collapse}
+    \begin{center}
+      \href{http://reddit.com/r/collapse}{http://reddit.com/r/collapse}
+      \begin{itemize}
+\item    Population: ~ 41,166 (Oct 2015)
+\item    very pessimistic
+\item prepers \& doomers (we are bound to collapse)
+    \end{itemize}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Why ?}
+    \begin{center}
+      \begin{itemize}
+        \item<1-> My wakeupcall: \href{http://guymcpherson.com/}{Guy McPhearson} @OHM 2013
+        \item<2-> Very negative view, but has many valid points
+        \item<3-> One of the to too few: meta-scientists.
+    \end{itemize}
+    \end{center}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Why ?}
+    \begin{center}
+      \begin{itemize}
+        \item<1-> I read both, heavily
+        \item<2-> Neighter an extrem optimistic, nor pessimistic view is healty, or right
+        \item<3-> Reality is usually somewhere in between
+    \end{itemize}
+    \end{center}
+\end{frame}
+
+
+\section{}
+
+\section{Let's see}
+\newcommand{\qitem}[4] {
+\begin{frame}
+    \frametitle{futurology or collapse ?}
+    \begin{itemize}
+      \item<1-> #1
+      \item<2-> #2
+      \item<2-> \href{#3}{#3}
+    \end{itemize}
+\end{frame}
+
+{ % all template changes are local to this group.
+    \setbeamertemplate{navigation symbols}{}
+    \begin{frame}[plain]
+        \begin{tikzpicture}[remember picture,overlay]
+            \node[at=(current page.center) t] {
+                \includegraphics[height=\paperheight,keepaspectratio]{img/#4}
+            };
+        \end{tikzpicture}
+     \end{frame}
+}
+}
+
+\qitem{Solar Storm Risk to the North American Electric Grid}{collapse}{http://www.lloyds.com/~/media/Lloyds/Reports/Emerging\%20Risk\%20Reports/Solar\%20Storm\%20Risk\%20to\%20the\%20North\%20American\%20Electric\%20Grid.pdf}{solar_storm.png}
+\qitem{Worse Than Fossil Fuels Why Bioenergy Is Not Green}{collapse}{http://www.nakedcapitalism.com/2015/10/worse-than-fossil-fuels-why-bioenergy-is-not-green.html}{worse-than-fossil-fuels-why-bioenergy-is-not-green.png}
+\qitem{X-ray technology reveals California's forests are in for a radical transformation. Estimation of dead tree count statewide could be close to 120 million — as much as 20\% of the state's forests.}{collapse}{http://www.latimes.com/local/california/la-me-dying-forests-20151020-story.html}{la-me-dying-forests-20151020-story.png}
+\qitem{Mind hack: Scientists use magnets to change attitudes on immigration, religion}{futurology}{https://www.rt.com/uk/318881-magnets-brain-immigration-religion/}{318881-magnets-brain-immigration-religion.png}
+\qitem{Hurricane Patricia Becomes Strongest Hurricane Ever Recorded; Catastrophic Landfall Expected in Mexico Friday}{collapse}{http://www.weather.com/storms/hurricane/news/hurricane-patricia-mexico-coast}{hurricane-patricia-mexico-coast.png}
+\qitem{Sam Altman (Y Combinator) defending Basic Income as a tool to deal with disruptive technologies}{futurology}{https://www.youtube.com/watch?v=uSrBOsgzihw}{yt_v=uSrBOsgzihw.png}
+\qitem{A new update to the limits to growth model suggests that preparing for collapse is more important than trying to avoid}{ collapse}{http://sustainable.unimelb.edu.au/sites/default/files/docs/MSSI-ResearchPaper-4\_Turner\_2014.pdf}{limits_of_growth.png}
+\qitem{A new material with micropores might be a way to fight climate change. Scientists have created crystals that capture carbon dioxide much more efficiently than previously known materials, even in the presence of water.}{futurology}{http://www.futuretimeline.net/blog/2015/10/18.htm}{yt_v=uSrBOsgzihw.png}
+\qitem{System that replaces human intuition with algorithms outperforms 615 of 906 human teams.}{futurology}{http://news.mit.edu/2015/automating-big-data-analysis-1016}{automating-big-data-analysis-1016.png}
+\qitem{Permafrost warming in parts of Alaska is 'unbelievable'}{collapse}{http://www.bbc.com/news/science-environment-34540414}{science-environment-34540414.png}
+\qitem{Warmer ocean may be releasing frozen methane}{futurology}{http://news.agu.org/press-release/bubble-plumes-off-washington-oregon-suggest-warmer-ocean-may-be-releasing-frozen-methane/ (39 votes)}{bubble-plumes-off-washington-oregon-suggest-warmer-ocean-may-be-releasing-frozen-methane.png}
+\qitem{Koster said he was troubled by new reports about the site. One found radiological contamination in trees outside the landfill's perimeter. Another showed evidence that the fire has moved past two rows of interceptor wells and closer to the nuclear waste.}{collapse}{http://www.usnews.com/news/us/articles/2015/10/06/disaster-plan-developed-in-case-fire-reaches-nuclear-waste}{disaster-plan-developed-in-case-fire-reaches-nuclear-waste.png}
+\qitem{Like Sleeping Beauty, some research lies dormant for decades, study finds}{futurology}{http://phys.org/news/2015-05-beauty-lies-dormant-decades.html}{2015-05-beauty-lies-dormant-decades_html.png}
+\qitem{U.S. Navy presentation on Low Energy Nuclear Reactions (LENR) Phenomena and Potential Applications}{futurology}{http://www.lenr-forum.com/forum/index.php/Attachment/386-IEEE-brief-DeChiaro-9-2015-pdf/}{us_navy_presentation_on_low_energy_nuclear.png}
+\qitem{We passed 400 ppm co2 equivalent in 1985 and are currently over 481 co2 eq.}{collapse}{http://www.esrl.noaa.gov/gmd/ccgg/aggi.html}{aggi_html.png}
+\qitem{Floating Farms: Fleets of Agricultural Barges Could Yield 10 Tons Per Ship Per Year}{futurology}{http://weburbanist.com/2015/09/27/floating-farms-agricultural-barges-to-yield-10-tons-per-year/}{floating-farms-agricultural-barges-to-yield-10-tons-per-year.png}
+\qitem{Investors Are Mining For The Next Hot Commodity: Water. Wall Street Smells Profit As California Endures Devastating Drought}{collapse}{https://theoldspeakjournal.wordpress.com/2015/09/25/investors-are-mining-for-the-next-hot-commodity-water-wall-street-smells-profit-as-california-endures-devastating-drought/}{investors-are-mining-for-the-next-hot-commodity-water-wall-street-smells-profit-as-california-endures-devastating-drought.png}
+\qitem{Employee compensation as a percent of GDP is down to the lowest level recorded [chart]}{collapse}{http://www.marketoracle.co.uk/images/2013/Dec/MM-12-5-13-employee-compensation.png}{MM-12-5-13-employee-compensation_png.png}
+\qitem{'Doomsday Vault' sees its first withdrawal}{collapse}{http://www.usatoday.com/story/news/world/2015/09/23/newser-doomsday-vault/72671518/}{72671518.png}
+\qitem{Watch High-Speed Trading Bots Go Berserk | MIT Technology Review }{collapse}{http://www.technologyreview.com/view/428756/watch-high-speed-trading-bots-go-berserk/}{watch-high-speed-trading-bots-go-berserk.png}
+\qitem{Break-even achieved in Swedish fusion research project using ultra-dense deuterium at Gothenburg Uni.}{futurology}{http://scitation.aip.org/content/aip/journal/adva/5/8/10.1063/1.4928572}{1_4928572.png}
+\qitem{Homesick - According to a 1976 NASA study, living in a space colony might make us feel as though nothing is real; a self-contained, artificial world could trigger a solipsistic syndrome in its residents "where everything is like a theater stage."}{futurology}{http://motherboard.vice.com/read/homesick}{homesick.png}
+\qitem{World's first AI boss improves warehouse efficiency by 8\%}{futurology}{http://ieet.org/index.php/IEET/more/dvorsky20150918}{dvorsky20150918.png}
+\qitem{New Studies Dismantle the Notion of a Global Warming 'Pause'}{collapse}{http://www.washingtonpost.com/news/energy-environment/wp/2015/09/17/new-statistical-studies-dismantle-the-notion-of-a-global-warming-pause/}{new-statistical-studies-dismantle-the-notion-of-a-global-warming-pause.png}
+\qitem{Tuna and mackerel populations suffer catastrophic 74\% decline, research shows}{collapse}{http://www.theguardian.com/environment/2015/sep/15/tuna-and-mackerel-populations-suffer-catastrophic-74-decline-research-shows}{tuna-and-mackerel-populations-suffer-catastrophic-74-decline-research-shows.png}
+\qitem{Exxon's Own Research Confirmed Fossil Fuels' Role in Global Warming Decades Ago; Top executives were warned of possible catastrophe from greenhouse effect, then led efforts to block solutions.}{collapse}{http://insideclimatenews.org/news/15092015/Exxons-own-research-confirmed-fossil-fuels-role-in-global-warming}{Exxons-own-research-confirmed-fossil-fuels-role-in-global-warming.png}
+\qitem{RESOURCE CRISIS: Why Johnny can't understand climate: functional illiteracy and the rise of "unpropaganda"}{collapse}{http://cassandralegacy.blogspot.com/2015/08/why-johnny-cant-understand-climate.html}{why-johnny-cant-understand-climate_html.png}
+%\qitem{Total War in Yemen Totally Ignored by Western Media}{collapse}{http://journal-neo.org/2015/08/27/total-war-in-yemen-totally-ignored-by-western-media/}{total-war-in-yemen-totally-ignored-by-western-media.png}
+\qitem{Next Big Future: Startup Knowm combines machine learning, quantum computing via memristors}{futurology}{http://nextbigfuture.com/2015/08/startup-knowm-combines-machine-learning.html}{startup-knowm-combines-machine-learning_html.png}
+\qitem{Researcher Demonstrates How to Suck Carbon from the Air, Make Stuff from It: A novel electrochemical process sequesters carbon in the form of a versatile building material}{futurology}{http://www.technologyreview.com/news/540706/researcher-demonstrates-how-to-suck-carbon-from-the-air-make-stuff-from-it/}{researcher-demonstrates-how-to-suck-carbon-from-the-air-make-stuff-from-it.png}
+\qitem{Jimmy Carter Is Correct that the U.S. Is No Longer a Democracy}{collapse}{http://www.greanvillepost.com/2015/08/03/jimmy-carter-is-correct-that-the-u-s-is-no-longer-a-democracy/}{jimmy-carter-is-correct-that-the-u-s-is-no-longer-a-democracy.png}
+\qitem{Genetic switch turns on the aging process at reproductive maturity}{futurology}{http://www.sciencedaily.com/releases/2015/07/150723125244.htm}{150723125244_htm.png}
+%\qitem{TIL AI algorithms often outsmart researchers working on them, evolving hardware and capabilities "that should not work" with the resources available to them - including makeshift radio receivers to communicate with other equipment in a lab and discovering a soldering iron using a common power supply}{futurology}{https://www.reddit.com/r/Futurology/comments/3dxgf7/til_ai_algorithms_often_outsmart_researchers/}{til_ai_algorithms_often_outsmart_researchers.png}
+\qitem{More than 2,100 new coal plants are being planned worldwide — enough to cook the planet}{collapse}{http://www.vox.com/2015/7/9/8922901/coal-renaissance-numbers}{coal-renaissance-numbers.png}
+\qitem{Mystery of Siberia's 200ft-deep craters solved: Enormous holes were formed by methane eruptions triggered by melting permafrost}{collapse}{http://www.dailymail.co.uk/sciencetech/article-3159067/Mystery-Siberia-s-200ft-deep-craters-solved-Enormous-holes-formed-methane-eruptions-triggered-melting-permafrost.html}{Mystery-Siberia-s-200ft-deep-craters-solved-Enormous-holes-formed-methane-eruptions-triggered-melting-permafrost_html.png}
+\qitem{In test dogfight, F-35, gets destroyed by F-16, the plane it is supposed to be replacing.}{futurology}{http://arstechnica.com/information-technology/2015/06/report-in-test-dogfight-f-35-gets-waxed-by-f-16/}{report-in-test-dogfight-f-35-gets-waxed-by-f-16.png}
+\qitem{Google's AI Bot thinks purpose of life is to "live forever"}{futurology}{http://www.businessinsider.com/google-tests-new-artificial-intelligence-chatbot-2015-6}{google-tests-new-artificial-intelligence-chatbot-2015-6.png}
+\qitem{Human radiologists missed 7\% of cancers in a study, a deep learning algorithm missed 0\%}{futurology}{http://money.cnn.com/2015/03/12/technology/enlitic-technology/index.html}{index_html.png}
+\qitem{A Dutch City Will Start Experimenting with Unconditional Basic Income This Summer}{futurology}{http://www.futurism.com/links/view/a-dutch-city-will-start-experimenting-with-unconditional-basic-income-this-summer/}{a-dutch-city-will-start-experimenting-with-unconditional-basic-income-this-summer.png}
+\qitem{Researchers create creepy, hyperrealistic CGI skin}{futurology}{http://www.slashgear.com/researchers-create-creepy-hyperrealistic-cgi-skin-24390258/}{researchers-create-creepy-hyperrealistic-cgi-skin-24390258.png}
+\qitem{Robotics revolution rocks Chinese textile workers}{futurology}{http://www.aljazeera.com/indepth/features/2015/06/robotics-revolution-rocks-chinese-textile-workers-150614073735531.html}{robotics-revolution-rocks-chinese-textile-workers-150614073735531_html.png}
+\qitem{Biodiversity reduces human, wildlife diseases and crop pests: Study confirms 'dilution effect hypothesis'}{collapse}{http://www.sciencedaily.com/releases/2015/06/150615094309.htm}{150615094309_htm.png}
+\qitem{In Wyoming it's now illegal to collect data about pollution}{collapse}{http://www.greenisthenewred.com/blog/wyoming-ag-gag-data-gathering-law/8396/}{8396.png}
+\qitem{India to revive cold fusion research, two decades after abandoning it.}{futurology}{http://asianlite.com/news/indian-news/india-to-revive-cold-fusion/}{india-to-revive-cold-fusion.png}
+\qitem{85,000 Endangered Antelopes Die Mysteriously In Just One Day}{collapse}{http://www.iflscience.com/plants-and-animals/saiga-antelopes-dying-unprecedented-rates}{saiga-antelopes-dying-unprecedented-rates.png}
+\qitem{Telomere extension turns back aging clock in cultured human cells, study finds}{futurology}{https://med.stanford.edu/news/all-news/2015/01/telomere-extension-turns-back-aging-clock-in-cultured-cells.html}{telomere-extension-turns-back-aging-clock-in-cultured-cells_html.png}
+\qitem{Fossil fuels subsidised by $10m a minute, says IMF - $5.3 trillion per year}{futurology}{http://www.theguardian.com/environment/2015/may/18/fossil-fuel-companies-getting-10m-a-minute-in-subsidies-says-imf}{fossil-fuel-companies-getting-10m-a-minute-in-subsidies-says-imf.png}
+\qitem{The encroaching sea: new NZ sea level rise maps; "So is a 10 or 25 metre SLR likely? Unfortunately ...yes"}{collapse}{http://hot-topic.co.nz/the-encroaching-sea-new-nz-sea-level-rise-maps/}{the-encroaching-sea-new-nz-sea-level-rise-maps.png}
+\qitem{New desalination technology could answer state drought woes}{futurology}{http://phys.org/news/2015-02-desalination-technology-state-drought-woes.html}{2015-02-desalination-technology-state-drought-woes_html.png}
+\qitem{Sao Paulo: water tankers are the new normal.}{collapse}{http://lab.org.uk/sao-paulo-water-tankers-are-the-new-normal}{sao-paulo-water-tankers-are-the-new-normal.png}
+\qitem{We've Passed the Point of Peak Food}{collapse}{http://disinfo.com/2015/01/weve-passed-point-peak-food/}{weve-passed-point-peak-food.png}
+\qitem{[Graph] Productivity per drilling rig, an illustration of declining returns (PeakOilBarrel)}{collapse}{http://i.imgur.com/4Q3DZFg.jpg}{4Q3DZFg.png}
+\qitem{Our economic system enriches the most powerful at the expense of the 99\% - The richest 1\% will soon be wealthier than the rest of the world combined. We must fix our global economy now – or face chaotic consequences.}{collapse}{http://www.theguardian.com/public-leaders-network/2015/jan/20/economic-system-enriches-most-powerful-oxfam}{economic-system-enriches-most-powerful-oxfam.png}
+\qitem{Brazil’s worst drought in history prompts protests and blackouts}{collapse}{http://www.theguardian.com/world/2015/jan/23/brazil-worst-drought-history}{brazil-worst-drought-history.png}
+\qitem{Computers using digital footprints are better judge of personality than friends and family}{futurology}{http://phys.org/news/2015-01-digital-footprints-personality-friends-family.html}{2015-01-digital-footprints-personality-friends-family_html.png}
+\qitem{Our System Is Broken, Almost No Patented Discoveries Ever Get Used}{futurology}{http://www.wired.com/2015/01/fixing-broken-patent-system/}{fixing-broken-patent-system.png}
+\qitem{This Ingenious Machine Turns Feces Into Drinking Water}{futurology}{http://www.gatesnotes.com/Development/Omniprocessor-From-Poop-to-Potable}{Omniprocessor-From-Poop-to-Potable.png}
+\qitem{Venezuela: Now There's Not Even Soap}{collapse}{http://www.zerohedge.com/news/2015-01-04/now-theres-not-even-soap-maduro-heads-china-save-socialist-utopia-venezuela}{now-theres-not-even-soap-maduro-heads-china-save-socialist-utopia-venezuela.png}
+\qitem{In 2015 LPP Fusion will test Tungsten cathode, beryllium electrode and Proton Boron Aneutronic Nuclear Fusion}{futurology}{http://nextbigfuture.com/2014/12/in-2015-lpp-fusion-will-test-tungsten.html}{in-2015-lpp-fusion-will-test-tungsten_html.png}
+\qitem{Dystopian Fiction\'s Popularity Is a Warning Sign for the Future — Naomi Klein on Demanding Transition, Not Collapse}{futurology}{http://www.wired.com/2014/12/geeks-guide-naomi-klein/}{geeks-guide-naomi-klein.png}
+\qitem{Humans May Be Causing the Sixth Great Extinction in Half a Billion Years}{futurology}{https://news.vice.com/article/humans-may-be-causing-the-sixth-great-extinction-in-half-a-billion-years}{humans-may-be-causing-the-sixth-great-extinction-in-half-a-billion-years.png}
+\qitem{The world may only have 60 years of topsoil left: If present rates of degradation continue, all of the world's topsoil could be lost by 2075, according to a senior UN official.}{futurology}{http://www.futuretimeline.net/blog/2014/12/12.htm\#.VIuHEzHF98E}{12_htm.png}
+\qitem{CO2 Takes Just 10 Years to Reach Planet’s Peak Heat}{collapse}{http://www.climatecentral.org/news/co2-emissions-peak-heat-18394}{co2-emissions-peak-heat-18394.png}
+\qitem{'Superbugs' Kill India’s Babies and Pose an Overseas Threat}{collapse}{http://www.nytimes.com/2014/12/04/world/asia/superbugs-kill-indias-babies-and-pose-an-overseas-threat.html}{superbugs-kill-indias-babies-and-pose-an-overseas-threat_html.png}
+\qitem{Pentagon preparing for mass civil breakdown}{collapse}{http://www.theguardian.com/environment/earth-insight/2014/jun/12/pentagon-mass-civil-breakdown}{pentagon-mass-civil-breakdown.png}
+\qitem{Elon Musk via Edge on AI - "The risk of something seriously dangerous happening is in the five year timeframe. 10 years at most"}{futurology}{http://i.imgur.com/sL0uqqW.jpg}{sL0uqqW.png}
+\qitem{Humble spud poised to launch a world food revolution - Dutch team is pioneering development of crops fed by sea water}{futurology}{http://www.theguardian.com/science/2014/oct/18/humble-potato-poised-to-launch-food-revolution}{humble-potato-poised-to-launch-food-revolution.png}
+
+\section{Can we save ourselves ?}
+
+\begin{frame}
+    \frametitle{Can we save ourselves}
+    \begin{center}
+      \begin{itemize}
+        \item<1-> maybe
+        \item<2-> \url{http://supergravity.org}
+        \item<2-> Using on of the sleeping beauties
+    \end{itemize}
+    \end{center}
+\end{frame}
+
+%
+% \section{Basics}
+%
+% \begin{frame}
+%     \frametitle{Theorems}
+%     \begin{center}
+%     \begin{itemize}
+%         \item<1->Empty Euclidean space without any physical properties and restrictions
+%         \item<2->Strict conservation of energy
+%         \item<3->Two super dense fundamental particles able to vibrate and congregate
+%         \item<4->A fundamental law of Super Gravitation (SG) – an inverse cubic law valid in empty space.
+%                  $F_{sg} = G_{sg}{m_1*m_2 \over r^3}$
+%     \end{itemize}
+%     \end{center}
+% \end{frame}
+%
+% \begin{frame}
+%     \frametitle{Fundemental Particles (FP)}
+%     \begin{center}
+%     \begin{columns}
+%         \column{0.5\textwidth}
+%             \includegraphics[height=0.9\textheight]{img/prisms.png}
+%         \column{0.5\textwidth}
+%             \begin{itemize}
+%                 \item<1->Attraction between nodes of same type is higher
+%                 \item<2->Depending on the conditions, nodes cristalize to high-level structures
+%                 \item<3->Crystallised structres can be stable outside of their crystallisation environment
+%             \end{itemize}
+%     \end{columns}
+%     \end{center}
+% \end{frame}
+%
+% \begin{frame}
+%     \frametitle{CL Nodes}
+%     \begin{center}
+%     \begin{columns}
+%         \column{0.5\textwidth}
+%             \includegraphics[height=0.3\textheight]{img/cl_structure.png}\linebreak
+%             \includegraphics[height=0.5\textheight]{img/cl_space.png}
+%         \column{0.5\textwidth}
+%             \begin{itemize}
+%                 \item Cosmic Lattice (CL) Nodes (Aether)
+%                 \item<2->Least dense structure
+%                 \item<3->Stable in empty space
+%                 \item<4->Crystallise from eighter Right \& Left FP
+%                 \item<5->Can crystallise in empty space
+%             \end{itemize}
+%     \end{columns}
+%     \end{center}
+% \end{frame}
+%
+% \begin{frame}
+%     \frametitle{RL Nodes}
+%     \begin{center}
+%     \begin{columns}
+%         \column{0.5\textwidth}
+%             \includegraphics[height=0.4\textheight]{img/mono_rect_lattice.png}
+%             \only<4->{\includegraphics[height=0.4\textheight]{img/mixed_rect_lattice.png}}
+%         \column{0.5\textwidth}
+%             \begin{itemize}
+%                 \item Rectangular Lattice (RL)
+%                 \item<2->Crystallises only under special conditions
+%                 \item<3->Higher density
+%                 \item<3->Stable only in confined space
+%                 \item<4->Can be mixed or mono
+%             \end{itemize}
+%     \end{columns}
+%     \end{center}
+% \end{frame}
+%
+% \begin{frame}
+%     \frametitle{CL Nodes}
+%     \begin{center}
+%     \includegraphics[height=0.4\textheight]{img/helical_core.png}
+%     \includegraphics<2->[height=0.4\textheight]{img/boundry_cubic.png}
+%     \begin{itemize}
+%         \item Helical cores have an internal twisting
+%         \item<2-> Boundry layers exist between changes of lattice types
+%     \end{itemize}
+%     \end{center}
+% \end{frame}
+%
+%
+% \begin{frame}
+%     \frametitle{CL Nodes}
+%     \begin{center}
+%     \includegraphics[height=0.4\textheight]{img/emersed.png}
+%     \end{center}
+%     The cosmic lattice can penetrate most parts of matter
+% \end{frame}
+%
+% \subsection{Helical Structures}
+%
+% \begin{frame}
+%     \frametitle{Buildup of helical structures}
+%     \begin{center}
+%     \begin{itemize}
+%       \item type of prisms they are made of: left or right-handed
+%       \item spatial positions: internal or external
+%       \item helical order: first; second; third
+%       \item overall shape: straight, twisted, toroidal
+%       \item number of repeatable turns: single turn (or coil) and multiturn
+%     \end{itemize}
+%     \end{center}
+% \end{frame}
+%
+% \begin{frame}
+%     \frametitle{First Order Helical Structure (FOHS)}
+%     \begin{center}
+%     \includegraphics[height=1.0\textheight]{img/first_order.png}
+%     \end{center}
+% \end{frame}
+%
+% \begin{frame}
+%     \frametitle{Second Order Helical Structure (SOHS)}
+%     \begin{center}
+%     \begin{columns}
+%         \column{0.6\textwidth}
+%             \includegraphics[height=.7\textheight]{img/single_turn_second.png}
+%         \column{0.4\textwidth}
+%             \begin{itemize}
+%                 \item<1-> Left-handed embedded in right-handed
+%                 \item<2-> Right-handed helical core
+%                 \item<3-> Left-handed helical core
+%                 \item<4-> Single-turn helical structures can lose their embedded core
+%             \end{itemize}
+%     \end{columns}
+%     \end{center}
+% \end{frame}
+%
+% \begin{frame}
+%     \frametitle{Structure Description}
+%     \begin{center}
+%             \includegraphics[height=.9\textheight]{img/prism_dec.png}
+%     \end{center}
+% \end{frame}
+%
+% \begin{frame}
+%     \frametitle{Structure Description Examples}
+%     \begin{center}
+%             \includegraphics[height=0.8\textheight]{img/dec_examples.png}
+%     \end{center}
+% \end{frame}
+%
+% \subsection{Electron/Proton}
+%
+% \begin{frame}
+%     \frametitle{Electron}
+%     \begin{center}
+%     \includegraphics[height=0.7\textheight]{img/electron.png}
+%     \begin{table}
+% \begin{tabular}{l | c | c | c | c }
+% Name & Notion & External Shell & Internal Structures\\
+% \hline
+% Electron & $\epsilon -$ & $H_1^1:R(L(R))$ & $\epsilon +$ \\
+% \end{tabular}
+% \end{table}
+%     \end{center}
+% \end{frame}
+%
+% \begin{frame}
+%     \frametitle{Electron}
+%     \begin{center}
+%     \includegraphics[height=0.7\textheight]{img/electron_filling.png}
+%     \end{center}
+% \end{frame}
+%
+% \begin{frame}
+%     \frametitle{Filling}
+%     \begin{center}
+%     \includegraphics[height=0.7\textheight]{img/electron_filling2.png}
+%     \includegraphics[height=0.7\textheight]{img/electron_filling3.png}
+%     \end{center}
+% \end{frame}
+%
+% \begin{frame}[c]
+%     \frametitle{Proton}
+%     \begin{columns}
+%         \column{0.5\textwidth}
+%             \includegraphics[height=0.7\textheight]{img/proton-internal.png}
+%         \column{0.5\textwidth}
+%             \begin{itemize}
+%                 \item<1-> Proton consists of 3 internal structures
+%                 \item<2-> $K_{L}^0$ kaon ($SH_m^1(R(L(R)$)
+%                 \item<3-> $\pi^-$ pion -  ($CH_m^2(R(L(R)$)
+%                 \item<4-> $\pi^+$ pion +  ($CH_m^2(L(R)$)
+%             \end{itemize}
+%     \end{columns}
+% \end{frame}
+%
+%
+% \begin{frame}[c]
+%     \frametitle{Proton}
+%     \begin{columns}
+%         \column{0.5\textwidth}
+%             \includegraphics[height=0.7\textheight]{img/proton-neutron.png}
+%         \column{0.5\textwidth}
+%             \begin{itemize}
+%                 \item<1-> The proton is a third-level helical structure
+%                 \item<2-> a - torus form not stable in CL space
+%                 \item<3-> b - twisted torus = proton
+%                 \item<4-> c - folded torus = neutron
+%                 \item<5-> neutron <> proton transition is a folding change only
+%             \end{itemize}
+%     \end{columns}
+% \end{frame}
+%
+%
+% \section{Atoms}
+%
+%
+% { % all template changes are local to this group.
+%     \setbeamertemplate{navigation symbols}{}
+%     \begin{frame}[plain]
+%         \begin{tikzpicture}[remember picture,overlay]
+%             \node[at=(current page.center)] {
+%                 \includegraphics[height=1.0\textheight]{img/basic_blocks.png}
+%             };
+%         \end{tikzpicture}
+%      \end{frame}
+%     \begin{frame}[plain]
+%         \begin{tikzpicture}[remember picture,overlay]
+%             \node[at=(current page.center)] {
+%                 \includegraphics[height=0.9\textheight]{img/atlas_legende.png}
+%             };
+%         \end{tikzpicture}
+%      \end{frame}
+% }
+% \begin{frame}
+%     \frametitle{first atoms}
+%     \includegraphics[height=0.9\textheight]{img/first_atoms.png}
+% \end{frame}
+%
+% \subsection{Molecules}
+%
+% \begin{frame}
+%     \frametitle{Molecules\: Aspirin}
+%     \includegraphics[height=0.9\textheight]{img/aspirin.png}
+%     Angles match the chemical models very well
+% \end{frame}
+% \begin{frame}
+%     \frametitle{Molecules\: DNA}
+%     \includegraphics[height=0.9\textheight]{img/dna.png}
+% \end{frame}
+% \begin{frame}
+%     \frametitle{Molecules\: Nano Silver}
+%     \begin{overpic}[scale=1.0]{img/silver_atoms.png}
+%      \put(-20,30){\includegraphics[scale=1.0]{img/silver_atoms_pic.png}}
+%   \end{overpic}
+% \end{frame}
+%
+% \section{Summary}
+%
+%
+% \begin{frame}
+%     \frametitle{What's not possible}
+%     \begin{itemize}
+%         \item<1-> Building a closed system
+%         \item<2-> Leaving the CL space
+%         \item<3-> Visiting all the other galaxies\linebreak
+%                   Matter can be incompatible between galaxies
+%         \item<4-> Time travel backwards
+%     \end{itemize}
+% \end{frame}
+%
+% \begin{frame}
+%     \frametitle{What's possible}
+%     \begin{itemize}
+%         \item<1-> quite stable cyclic quantum states in carbon structures (predicted)
+%         \item<2-> travel faster than lightspeed (c changeable)
+%         \item<3-> harvest of the ZPE (static/dynamic) (closed system nearly impossible)
+%         \item<4-> n-times $c$ communication (Fermi paradox)
+%         \item<5-> manipulation of the Newtownian gravity (proven). SARG/Q-Thruster
+%     \end{itemize}
+% \end{frame}
+%
+%
+% \begin{frame}
+%     \frametitle{More}
+%     \url{http://www.helical-structures.org/}
+% \end{frame}
+%
+
+%\fi
+
+\end{document}
